@@ -72,3 +72,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+ # Reduces boot times through caching; required in config/boot.rb
+ gem 'bootsnap', '>= 1.4.2', require: false
+ gem 'rails-i18n'
+ gem 'pry-rails'
