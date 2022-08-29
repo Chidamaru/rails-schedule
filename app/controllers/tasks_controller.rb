@@ -10,13 +10,10 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(params.require(:task).permit(:name, :allday, :start, :finish, :discription))
-    binding.pry
     if @task.save
-      binding.pry
       flash[:notice] = "スケジュールを新規登録しました"
       redirect_to :tasks
     else
-      binding.pry
       render "new" , status: :unprocessable_entity
     end
   end
