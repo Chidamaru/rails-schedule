@@ -32,7 +32,7 @@ class TasksController < ApplicationController
       flash[:notice] = "#{@task.id}のスケジュールを更新しました"
       redirect_to :tasks
     else
-      render "edit"
+      render "edit" , status: :unprocessable_entity
     end
   end
 
